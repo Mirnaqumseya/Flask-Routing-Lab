@@ -1,16 +1,14 @@
-from flask import Flask, redirect, request, render_template, url_for
-
-
+from flask import Flask, render_template
 app = Flask(  # Create a flask app
     __name__,
     template_folder='templates',  # Name of html file folder
-    static_folder='static'  # Name of directory for static files
-)
+    static_folder='static')  # Name of directory for static files
 
 # Your code should be below
 
-
-
+@app.route('/')
+def hello_world():
+    return render_template('home.html')
 
 # Your code should be above
 
